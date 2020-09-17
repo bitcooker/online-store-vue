@@ -5,26 +5,8 @@
    <Home v-if="selectedPage === 'home'"></Home>
   </div>
 
-  <Products> </Products>
+  <Products v-if="selectedPage === 'products'"> </Products>
 
-
-  <!-- <div class="row mb-3" >
-      <div class="col-md-9">
-        <h1>Golden Shoe</h1>
-      </div>
-      <div class="col-md-3">
-        <ShoppingCart />
-      </div>
-    </div>
-  <div class="row">
-      <Item
-        v-for="item in forSale"
-        :key="item.invId"
-        :invId="item.invId"
-        :name="item.name"
-        :image="item.image"
-        :price="item.price" />
-    </div> -->
     <div>
       <Footer></Footer>
     </div>
