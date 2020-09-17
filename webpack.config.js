@@ -44,7 +44,7 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['*', '.js', '.vue', '.json']
-  },
+},
   devServer: {
     historyApiFallback: true,
     noInfo: true,

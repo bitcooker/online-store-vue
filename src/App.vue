@@ -1,24 +1,17 @@
 <template>
-  <div id="app" class="container my-5">
-    <h1>My online store</h1>
-     <div class="row">
-      <div class="col-md-3" v-for="item in forSale" v-bind="key">
-        <div class="card">
-          <img :src="item.image" :alt="item.name" class="card-img-top">
-            <div class="card-body">
-              <h4 class="card-title">{{ item.name }}</h4>
-            <div class="card-text">${{ item.price / 100 }}</div>
-      <div class="row justify-content-end">
-        <button class="btn btn-primary">Add to cart</button>
-      </div>
-      
-    </div>
-  </div>
-</div>
-      </div>
+  <div class="row">
+      <Item
+        v-for="item in forSale"
+        :key="item.invId"
+        :invId="item.invId"
+        :name="item.name"
+        :image="item.image"
+        :price="item.price" />
     </div>
 </template>
 <script>
+
+import Item from './Item.vue';
 
 export default {
   name: 'app',
@@ -31,7 +24,10 @@ export default {
       { invId: 4, name: 'Other thing', image: '//placehold.it/200', price: 299 },
     ],
     };
-  }
+  },
+  components: {
+    Item,
+  },
 }
 
 </script>
