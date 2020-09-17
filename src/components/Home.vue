@@ -1,6 +1,7 @@
 <template>
   <div>
-        <p v-on:click="selectedPage('Home')" href="#">holding text</p>
+
+    <img class="mainImage" src="../assets/shoe.jpg" alt="HeroImage">
       <!-- This is the home page 
       <button class="btn btn-primary" @click="womans()">    </button> -->
   </div>
@@ -22,5 +23,9 @@ export default {
 </script>
 
 <style>
+
+.mainImage {
+  width: 30%;
+}
 
 </style>

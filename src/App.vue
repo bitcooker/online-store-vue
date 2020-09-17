@@ -1,9 +1,14 @@
 <template>
 <div id="app" class="container my-5">
   <div>
+    <NavBar></NavBar>
    <Home v-if="selectedPage === 'home'"></Home>
   </div>
-  <div class="row mb-3">
+
+  <Products> </Products>
+
+
+  <!-- <div class="row mb-3" >
       <div class="col-md-9">
         <h1>Golden Shoe</h1>
       </div>
@@ -19,7 +24,7 @@
         :name="item.name"
         :image="item.image"
         :price="item.price" />
-    </div>
+    </div> -->
     <div>
       <Footer></Footer>
     </div>
@@ -32,6 +37,8 @@ import ShoppingCart from './components/ShoppingCart';
 import { eventBus } from "./main";
 import Home from "./components/Home"
 import Footer from "./components/Footer"
+import NavBar from "./components/NavBar"
+import Products from "./components/Products"
 
 export default {
   name: 'app',
@@ -53,10 +60,14 @@ export default {
   },
 
   components: {
+    Home,
+    NavBar,
+    Footer,
     Item,
     ShoppingCart,
-    Home,
-    Footer,
+    Products,
+    
+   
   },
 };
 
