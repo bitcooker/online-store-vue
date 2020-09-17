@@ -24,8 +24,8 @@
 </template>
 <script>
 
-import Item from './Item';
-import ShoppingCart from './ShoppingCart';
+import Item from './components/Item';
+import ShoppingCart from './components/ShoppingCart';
 import { eventBus } from "./main";
 
 export default {

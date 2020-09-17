@@ -39,7 +39,7 @@
 </template>
 <script>
 
-import { dollars } from './filters';
+import { dollars } from '../filters';
 
 export default {
   name: 'ShoppingCart',
