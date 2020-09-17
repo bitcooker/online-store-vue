@@ -1,4 +1,13 @@
 <template>
+<div id="app" class="container my-5">
+  <div class="row mb-3">
+      <div class="col-md-9">
+        <h1>My online store</h1>
+      </div>
+      <div class="col-md-3">
+        <ShoppingCart />
+      </div>
+    </div>
   <div class="row">
       <Item
         v-for="item in forSale"
@@ -8,27 +17,24 @@
         :image="item.image"
         :price="item.price" />
     </div>
+    </div>
 </template>
 <script>
 
-import Item from './Item.vue';
+import Item from './Item';
+import ShoppingCart from './ShoppingCart';
 
 export default {
   name: 'app',
-  data() {
-    return {
-    forSale: [
-      { invId: 1, name: 'An Item', image: '//placehold.it/200', price: 999 },
-      { invId: 2, name: 'Thing', image: '//placehold.it/200', price: 1499 },
-      { invId: 3, name: 'Doo-dad', image: '//placehold.it/200', price: 499 },
-      { invId: 4, name: 'Other thing', image: '//placehold.it/200', price: 299 },
-    ],
-    };
+  computed: {
+    forSale() { return this.$store.getters.forSale; },
+    // inCart() { return this.$store.getters.inCart; },
   },
   components: {
     Item,
+    ShoppingCart,
   },
-}
+};
 
 </script>
 <style>

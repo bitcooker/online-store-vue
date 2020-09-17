@@ -6,7 +6,7 @@
         <h4 class="card-title">{{ name }}</h4>
         <div class="card-text">${{ price / 100 }}</div>
         <div class="row justify-content-end">
-          <button class="btn btn-primary">Add to cart</button>
+          <button class="btn btn-primary" @click="addToCart(invId)">Add to cart</button>
           <div class="card-text">{{ price | dollars }}</div>
         </div>
       </div>
@@ -14,11 +14,19 @@
   </div>
 </template>
 <script>
+import { dollars } from './filters';
+
 export default {
   name: 'item',
   props: ['invId', 'name', 'image', 'price'],
    filters: {
-    dollars: num => `$${num / 100}`,
+    dollars,
+  },
+    methods: {
+    addToCart(invId) {
+      this.$store.dispatch('addToCart', invId);
+    },
   },
 };
+
 </script>
