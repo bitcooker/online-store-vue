@@ -1,7 +1,7 @@
 <template>
 <div id="app" class="container my-5">
   <div>
-   <home v-if="selectedPage === 'Home'"></home>
+   <Home v-if="selectedPage === 'home'"></Home>
   </div>
   <div class="row mb-3">
       <div class="col-md-9">
@@ -21,7 +21,7 @@
         :price="item.price" />
     </div>
     <div>
-      <footer></footer>
+      <Footer></Footer>
     </div>
     </div>
 </template>
@@ -56,7 +56,7 @@ export default {
     Item,
     ShoppingCart,
     Home,
-    "Footer":Footer,
+    Footer,
   },
 };
 
