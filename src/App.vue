@@ -1,5 +1,8 @@
 <template>
 <div id="app" class="container my-5">
+  <div>
+    Nav Bar here
+  </div>
   <div class="row mb-3">
       <div class="col-md-9">
         <h1>Golden Shoe</h1>
@@ -23,12 +26,27 @@
 
 import Item from './Item';
 import ShoppingCart from './ShoppingCart';
+import { eventBus } from "./main";
 
 export default {
   name: 'app',
+
+  data() {
+    return {
+      selectedPage: "home"
+    }
+  },
+
+  mounted() {
+    eventBus.$on("selected-page", (page) => {
+      this.selectedPage = page;
+    });
+  },
+
   computed: {
     forSale() { return this.$store.getters.forSale; },
   },
+
   components: {
     Item,
     ShoppingCart,
