@@ -1,8 +1,8 @@
 <template>
   <div>
         <p v-on:click="selectedPage('products'), selectedProduct('mens')" href="#">Mens</p>
-         <p v-on:click="selectedPage('products')" href="#">Womans</p>
-          <p v-on:click="selectedPage('products')" href="#">Kids</p>
+        <p v-on:click="selectedPage('products'), selectedProduct('mens')" href="#">Womans</p>
+        <p v-on:click="selectedPage('products'), selectedProduct('mens')" href="#">Kids</p>
     
   </div>
 </template>

@@ -25,7 +25,9 @@ export default {
 <style>
 
 .mainImage {
-  width: 30%;
+  width: 80vw;
+  background-repeat: no-repeat;
+  
 }
 
 </style>
