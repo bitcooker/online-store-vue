@@ -6,8 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     forSale: [
-        { invId: 1, name: 'An Item', image: require('./assets/shoe.jpg'), price: 999 },
-        { invId: 2, name: 'Thing', image: require('./assets/shoe.jpg'), price: 1499 },
+        { invId: 2, name: 'Thing', image: ('gs://goldenshoe-9c251.appspot.com/pexels-arthur-ogleznev-1102777.jpg'), price: 1499 },
         { invId: 3, name: 'Doo-dad', image: require('./assets/shoe.jpg'), price: 499 },
         { invId: 4, name: 'Other thing', image: require('./assets/shoe.jpg'), price: 299 },
         { invId: 5, name: 'Other thing', image: require('./assets/shoe.jpg'), price: 299 },
