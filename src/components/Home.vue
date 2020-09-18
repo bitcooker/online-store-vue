@@ -2,8 +2,7 @@
   <div>
 
     <img class="mainImage" src="../assets/shoe.jpg" alt="HeroImage">
-      <!-- This is the home page 
-      <button class="btn btn-primary" @click="womans()">    </button> -->
+    
   </div>
 </template>
 
