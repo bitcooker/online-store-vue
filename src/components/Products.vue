@@ -38,6 +38,7 @@ export default {
 //   },
 computed: {
     forSale() { return this.$store.getters.forSale; },
+
   },
 
   components: {
