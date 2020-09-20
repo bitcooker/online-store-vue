@@ -13,6 +13,12 @@ import {eventBus} from '../main';
 
 export default {
   name: 'navbar',
+  data() {
+    return {
+      selectedProduct: 'mens'
+    }
+  },
+
   methods: {
   selectedPage(page) {
     eventBus.$emit("selected-page", page);
