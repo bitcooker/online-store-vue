@@ -2,11 +2,13 @@
 <div id="app" class="container my-5">
   <div>
     <NavBar></NavBar>
-   <Home v-if="selectedPage === 'home'"></Home>
+   <Home class="img" v-if="selectedPage === 'home'"></Home>
   </div>
 
   <Products v-if="selectedPage === 'products'"> </Products>
-
+   <div>
+   <SingleProduct v-if="selectedPage === 'SingleProduct'"> </SingleProduct>
+   </div>
     <div>
       <Footer></Footer>
     </div>
@@ -21,6 +23,7 @@ import Home from "./components/Home"
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 import Products from "./components/Products"
+import SingleProduct from "./components/SingleProduct"
 
 export default {
   name: 'app',
@@ -48,13 +51,24 @@ export default {
     Item,
     ShoppingCart,
     Products,
+    SingleProduct
     
    
   },
 };
 
 </script>
-<style>
- 
 
+<style>
+#app {
+     
+       background-image: url("./assets/shoe.jpg");
+       width: 100%;
+       height: 100%;
+       background-repeat: no-repeat;
+       
+       background-size: auto;
+     
+      }
 </style>
+  

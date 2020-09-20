@@ -1,7 +1,7 @@
-import * as firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
-import 'firebase/storage'
+// import * as firebase from 'firebase/app'
+// import 'firebase/auth'
+// import 'firebase/firestore'
+// import 'firebase/storage'
 
 // firebase init - add your own config here
 const firebaseConfig = {
@@ -15,14 +15,12 @@ const firebaseConfig = {
     measurementId: "G-PFWTSXRKHF"
 }
 
-const app = firebase.initializeApp(firebaseConfig)
+// const app = firebase.initializeApp(firebaseConfig)
 
-
-
-// utils
-const db = app.firestore()
-const auth = app.auth()
-const storage = app.storage();
+// // utils
+// const db = app.firestore()
+// const auth = app.auth()
+// const storage = app.storage();
 
 
 
@@ -36,12 +34,3 @@ const storage = app.storage();
 // const likesCollection = db.collection('likes')
 
 // export utils/refs
-export {
-  db,
-  auth,
-  storage
-//   photoCollection,
-//   postsCollection,
-//   commentsCollection,
-//   likesCollection
-}

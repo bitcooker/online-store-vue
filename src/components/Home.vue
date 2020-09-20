@@ -1,8 +1,6 @@
 <template>
-  <div>
-
-    <img class="mainImage" src="../assets/shoe.jpg" alt="HeroImage">
-    
+  <div class="mainImage">
+    <!-- <img src="../assets/shoe.jpg" alt="HeroImage"> -->
   </div>
 </template>
 
@@ -24,9 +22,10 @@ export default {
 <style>
 
 .mainImage {
-  width: 80vw;
-  background-repeat: no-repeat;
-  
+  /* background-image: url("../assets/shoe.jpg");
+  width: 1000px;
+  height: 1000px;
+  background-repeat: no-repeat; */  
 }
 
 </style>
