@@ -1,6 +1,6 @@
 # my-online-store
 
-> An online store and shopping card
+> An online store and shopping cart
 
 ## Build Setup
 
