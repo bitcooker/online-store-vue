@@ -9,6 +9,9 @@
    <div>
    <SingleProduct v-if="selectedPage === 'SingleProduct'"> </SingleProduct>
    </div>
+   <div>
+     <!-- <Chat></Chat> -->
+   </div>
     <div>
       <Footer></Footer>
     </div>
@@ -24,6 +27,7 @@ import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 import Products from "./components/Products"
 import SingleProduct from "./components/SingleProduct"
+import Chat from "./components/Chat"
 
 export default {
   name: 'app',
@@ -51,7 +55,8 @@ export default {
     Item,
     ShoppingCart,
     Products,
-    SingleProduct
+    SingleProduct,
+    Chat
     
    
   },
@@ -66,7 +71,6 @@ export default {
        width: 100%;
        height: 100%;
        background-repeat: no-repeat;
-       
        background-size: auto;
      
       }

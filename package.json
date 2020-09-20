@@ -14,6 +14,7 @@
     "firebase": "^7.21.0",
     "vue": "^2.5.11",
     "vue-async-computed": "^3.9.0",
+    "vue-quick-chat": "^1.2.6",
     "vuex": "^3.5.1"
   },
   "browserslist": [
