@@ -47,8 +47,7 @@ Golden Shoe
 Gatehead Road
 Moorfield Industrial Estate
 London
-KA2 0BA
-Scotland
+England
 
 Your item must be unworn and returned in its original condition. Golden Shoe aren't liable for your item while it is in transit back to us. All refunds and exchanges are processed within 1-3 working days of receiving the item back to our Returns Department.
 

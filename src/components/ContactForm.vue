@@ -32,10 +32,7 @@ import {eventBus} from '../main';
 export default {
 name: 'ContactForm',
 
-// components: {
-//     'vue-recaptcha': VueRecaptcha,
-//     'v-select': vSelect
-// },
+
 
  data() {
      return {
@@ -61,12 +58,7 @@ methods: {
     },
 
     submit: function () {
-    // this.status = "submitting";
-
-        // Verify email
-
-        // Verify phone
-
+    
         this.$refs.recaptcha.execute();
     },
     onCaptchaVerified: function (recaptchaToken) {

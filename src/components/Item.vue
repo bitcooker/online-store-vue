@@ -4,12 +4,18 @@
       <img :src="image" :alt="name" class="card-img-top img-fluid" @click="goToProduct(invId)">
       <div class="card-body">
         <h4 class="card-title">{{ name }}</h4>
-         <div class="card-text" >stock = {{stock}}</div>
-        <div class="card-text">${{ price / 100 }}</div>
+        <div class="card-text" v-if="stock < 1">
+          Out of Stock.
+        </div>
+        <div class="card-text" v-else-if="stock < 6">
+          Only {{stock}} left!
+        </div>
+         <!-- <div class="card-text" >stock = {{stock}}</div> -->
+        <!-- <div class="card-text">${{ price / 100 }}</div> -->
         <div class="row justify-content-end">
-          <button class="btn btn-primary" @click="addToCart(invId)" v-if="stock > 1">Add to cart</button>
           <div class="card-text">{{ price | dollars }}</div>
-         
+          <button class="btn btn-primary" @click="addToCart(invId)" v-if="stock > 1">Add to cart</button>
+          
         </div>
       </div>
     </div>

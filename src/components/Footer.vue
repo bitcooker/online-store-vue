@@ -11,7 +11,7 @@
             <a :href="`http://www.twitter.com`">Twitter</a>
                  <a :href="`http://www.instagram.com`">Instagram</a>
   <div>
-    <p v-on:click="selectedPage('csPage')" href="#">Customer Service</p>
+    <p v-on:click="selectedPage('csPage')" href="#">Delivery & Returns</p>
     </div>
      <div>
     <p v-on:click="selectedPage('contactForm')" href="#">Contact Form</p>
