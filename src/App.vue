@@ -24,6 +24,7 @@
 import Item from './components/Item';
 import ShoppingCart from './components/ShoppingCart';
 import { eventBus } from "./main";
+
 import Home from "./components/Home"
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
@@ -32,6 +33,10 @@ import SingleProduct from "./components/SingleProduct"
 import Chat from "./components/Chat"
 import CsPage from "./components/CsPage"
 import ContactForm from "./components/ContactForm"
+
+
+// Vue.use(BootstrapVue)
+// Vue.use(BootstrapVueIcons)
 
 export default {
   name: 'app',

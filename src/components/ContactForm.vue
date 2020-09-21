@@ -1,108 +1,101 @@
 <template>
-<div class="contactForm">
-  <form class="form" @submit.prevent="submit">
-    <input required name="first_name" id ="first_name" v-model='contact.first_name' placeholder="First name" type="text" autocomplete="on">
-    <input required name="last_name" id ="last_name" v-model='contact.last_name' placeholder="Last name" type="text" autocomplete="on">
-    <input required :class="['input-group', isEmailValid()]" name="email" id ="email" v-model="contact.email" placeholder="E-mail" type="email" autocomplete="on">
-    <input name="phone" id ="phone" v-model='contact.phone' placeholder="Phone" type="text" autocomplete="on">
-    <v-select placeholder="Reason" name="subjects" class="subject_selection" multiple :options="contact.options"></v-select>
-    <textarea name="message" id ="message" v-model="contact.message" rows="4" placeholder="Message"></textarea>
-    <!-- <div class='captcha-input'>
-            <vue-recaptcha
-            ref="recaptcha"
-            @verify="onCaptchaVerified"
-            @expired="onCaptchaExpired"
-            size="invisible"
-            sitekey="<KEY>">
-            </vue-recaptcha>
-    </div> -->
-    <button class="button">Send</button>
-</form>
-</div>
+  <div>
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form-group
+        id="input-group-1"
+        label="Email address:"
+        label-for="input-1"
+        description="We'll never share your email with anyone else."
+      >
+        <b-form-input
+          id="input-1"
+          v-model="form.email"
+          type="email"
+          required
+          placeholder="Enter email"
+        ></b-form-input>
+      </b-form-group>
 
+      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.name"
+          required
+          placeholder="Enter name"
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-3" label="Reason For Contact:" label-for="input-3">
+        <b-form-select
+          id="input-3"
+          v-model="form.reasonForContact"
+          :options="reasonForContact"
+          required
+        ></b-form-select>
+      </b-form-group>
+
+      <b-form-group id="input-group-4">
+        <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
+          <!-- <b-form-checkbox value="me">Check me out</b-form-checkbox> -->
+          <!-- <b-form-checkbox value="that">Check that out</b-form-checkbox> -->
+        </b-form-checkbox-group>
+      </b-form-group>
+
+      <!-- <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="reset" variant="danger">Reset</b-button> -->
+    </b-form>
+    <!-- <b-card class="mt-3" header="Form Data Result">
+      <pre class="m-0">{{ form }}</pre>
+    </b-card> -->
+
+    <div>
+    <b-form-textarea
+      id="textarea"
+      v-model="text"
+      placeholder="Enter something..."
+      rows="3"
+      max-rows="6"
+    ></b-form-textarea>
+
+    <pre class="mt-3 mb-0">{{ text }}</pre>
+  </div>
+     <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="reset" variant="danger">Reset</b-button>
+  </div>
 </template>
 
 <script>
-// import Vue from 'vue'
-// import vSelect from 'vue-select'
-// import VueRecaptcha from 'vue-recaptcha';
-
-import {eventBus} from '../main';
-
-export default {
-name: 'ContactForm',
-
-
-
- data() {
-     return {
-    contact: {
-
-        first_name: '',
-        last_name: '',
-        email: '',
-        phone: '',
-        message: '',
-        options: ['Sell','Become a student','Become a teacher', 'General enquiry'],
-        reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
+  export default {
+    data() {
+      return {
+        form: {
+          email: '',
+          name: '',
+          reasonForContact: null,
+          checked: []
+        },
+        reasonForContact: [{ text: 'Select One', value: null }, 'Return', 'Delivery', 'Size Check', 'Other'],
+        show: true
+      }
     },
-
-    isSending: false
-     }
-},
- 
-methods: {
-
-    isEmailValid: function() {
-        return (this.contact.email == "")? "" : (this.contact.reg.test(this.email)) ? 'has-success' : 'has-error';
-    },
-
-    submit: function () {
-    
-        this.$refs.recaptcha.execute();
-    },
-    onCaptchaVerified: function (recaptchaToken) {
-        const self = this;
-        self.status = "submitting";
-        self.$refs.recaptcha.reset();
-
-        this.isSending = true;
-
-        setTimeout(() => {
-            // Build for data
-            let form = new FormData();
-            for (let field in this.contact) {
-                form.append(field, this.contact[field]);
-            }
-
-            // Send form to server  
-            axios.post("https://api.airstudy.com.au/contacts/", form).then((response) => {
-                console.log(response);
-                this.clearForm();
-                this.isSending = false;
-            }).catch((e) => {
-                console.log(e)
-            });
-
-        }, 1000);
-
-    },
-    onCaptchaExpired: function () {
-        this.$refs.recaptcha.reset();
-    },
-
-    /**
-    * Clear the form
-    */  
-    clearForm() {
-        for (let field in this.contact) {
-            this.contact[field] = ''
-        }
-    },
-
-    selectedPage(page) {
-    eventBus.$emit("selected-page", page);
-    },
-}
-}
+    methods: {
+      onSubmit(evt) {
+        evt.preventDefault()
+        alert(JSON.stringify(this.form))
+      },
+      onReset(evt) {
+        evt.preventDefault()
+        // Reset our form values
+        this.form.email = ''
+        this.form.name = ''
+        this.form.reasonForContact = null
+        this.form.checked = []
+        // Trick to reset/clear native browser form validation state
+        this.show = false
+        this.$nextTick(() => {
+          this.show = true
+        })
+      }
+    }
+  }
 </script>
