@@ -15,6 +15,7 @@
    <CsPage v-if="selectedPage === 'csPage'"></CsPage>
     <div>
       <Footer></Footer>
+      <ContactForm v-if="selectedPage === 'contactForm'">Contact Form</ContactForm>
     </div>
     </div>
 </template>
@@ -30,6 +31,7 @@ import Products from "./components/Products"
 import SingleProduct from "./components/SingleProduct"
 import Chat from "./components/Chat"
 import CsPage from "./components/CsPage"
+import ContactForm from "./components/ContactForm"
 
 export default {
   name: 'app',
@@ -60,8 +62,8 @@ export default {
     SingleProduct,
     Chat,
     CsPage,
-    
-   
+    ContactForm,
+
   },
 };
 

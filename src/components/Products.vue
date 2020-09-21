@@ -21,8 +21,6 @@
     </div>
 </template>
 
-
-
 <script>
 
 import Item from './Item';
@@ -34,13 +32,7 @@ import 'firebase/storage';
 
 export default {
   name: 'products',
-//   methods: {
-//   selectedPage(page) {
-//     eventBus.$emit("selected-page", page);
-//     },
-//   },
 
-    // forSale() { return this.$store.getters.forSale; },
     asyncComputed: {
     forSale() {
       return new Promise((resolve, reject) => {
