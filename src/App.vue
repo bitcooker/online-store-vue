@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
      
        background-image: url("./assets/shoe.jpg");
        width: 100%;
@@ -83,6 +83,6 @@ export default {
        background-repeat: no-repeat;
        background-size: auto;
      
-      }
+      } */
 </style>
   
