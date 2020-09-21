@@ -10,8 +10,9 @@
        <a :href="`http://www.facebook.com`">Facebook</a>
             <a :href="`http://www.twitter.com`">Twitter</a>
                  <a :href="`http://www.instagram.com`">Instagram</a>
-   <!-- <button @click="$router.push('http://www.facebook.com')">Facebook</button>
-   <button :href="`http://www.facebook.com`">Facebook</button> -->
+  <div>
+    <p v-on:click="selectedPage('csPage')" href="#">Customer Service</p>
+    </div>
     </div>
   </div>
 
@@ -20,12 +21,17 @@
 
 <script>
 
+import {eventBus} from '../main';
 
 export default {
-  name: "Footer" 
+  name: "Footer" ,
+
+  methods: {
+  selectedPage(page) {
+    eventBus.$emit("selected-page", page);
+    },
+  },
 }
-
-
 
 </script>
 

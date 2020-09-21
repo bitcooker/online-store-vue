@@ -10,8 +10,9 @@
    <SingleProduct v-if="selectedPage === 'SingleProduct'"> </SingleProduct>
    </div>
    <div>
-     <!-- <Chat></Chat> -->
+    
    </div>
+   <CsPage v-if="selectedPage === 'csPage'"></CsPage>
     <div>
       <Footer></Footer>
     </div>
@@ -28,6 +29,7 @@ import NavBar from "./components/NavBar"
 import Products from "./components/Products"
 import SingleProduct from "./components/SingleProduct"
 import Chat from "./components/Chat"
+import CsPage from "./components/CsPage"
 
 export default {
   name: 'app',
@@ -56,7 +58,8 @@ export default {
     ShoppingCart,
     Products,
     SingleProduct,
-    Chat
+    Chat,
+    CsPage,
     
    
   },

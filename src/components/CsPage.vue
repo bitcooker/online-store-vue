@@ -26,9 +26,15 @@ You can also place your order online and collect from an OFFICE store using our 
 
 <script>
 
+import {eventBus} from '../main';
 
 export default {
-  name: "CsPage" 
+  name: "csPage" ,
+  methods: {
+  selectedPage(page) {
+    eventBus.$emit("selectedPage", page);
+    },
+  },
 }
 
 
