@@ -70,18 +70,6 @@
   </b-navbar>
 </div>
 
-  <!-- <div>
-  <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
-    <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('mens')" href="#">Mens</b-dropdown-item>
-    <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Womans</b-dropdown-item>
-    <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('kids')" href="#">Kids</b-dropdown-item>
-    <b-dropdown-divider></b-dropdown-divider>
-    <b-dropdown-item active>Active action</b-dropdown-item>
-    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-  </b-dropdown>
-</div> -->
-
-
 </div>
   
 </template>
