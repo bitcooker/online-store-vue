@@ -78,15 +78,16 @@ export default {
 </script>
 
 <style>
-/* #app {
-     
-       background-image: url("./assets/shoe.jpg");
-       width: 100%;
-       height: 100%;
-       background-repeat: no-repeat;
-       background-size: auto;
-     
-      } */
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
       .card-body {
         min-height: 145px;
       }
