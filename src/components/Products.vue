@@ -1,11 +1,11 @@
 <template>
   <div id="app1" class="container my-5">
   <div class="row mb-3" >
-      <div class="col-md-9">
+      <div class="col-md-11">
         <!-- <h1>Golden Shoe</h1> -->
       </div>
-      <div class="col-md-3">
-        <ShoppingCart />
+      <div class="col-md-1">
+        <!-- <ShoppingCart /> -->
       </div>
     </div>
   <div class="row" >

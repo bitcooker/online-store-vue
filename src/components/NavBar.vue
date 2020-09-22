@@ -1,10 +1,18 @@
 <template>
 <div>
+
+  <!-- <GoogleLogin :params="params" :onSuccess="onSuccess" :onFailure="onFailure">Login</GoogleLogin> -->
+
+  
  <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand v-on:click="selectedPage('home')" href="#">Golden Shoe</b-navbar-brand>
+    <b-navbar-brand v-on:click="selectedPage('home')" href="#">
+      <img src="https://firebasestorage.googleapis.com/v0/b/goldenshoe-9c251.appspot.com/o/golden-shoe-logo.svg?alt=media&token=faa41b29-1c57-417f-8e29-10579516c82d" alt="Golden Shoe" width="150px">
+    </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    
 
     <b-collapse id="nav-collapse" is-nav>
      
@@ -46,17 +54,18 @@
         </b-dropdown>
 
 
-         <b-nav-item-dropdown text="Lang" right>
+         <!-- <b-nav-item-dropdown text="Lang" right>
           <b-dropdown-item href="#">EN</b-dropdown-item>
           <b-dropdown-item href="#">ES</b-dropdown-item>
           <b-dropdown-item href="#">RU</b-dropdown-item>
           <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
-
+        </b-nav-item-dropdown> -->
+        <div class="sc-fix">
+          <ShoppingCart />
+        </div>
         <b-nav-item-dropdown right>
 
-            
-
+          
           <!-- Using 'button-content' slot -->
           <template v-slot:button-content>
             <em>User</em>
@@ -76,6 +85,8 @@
 <script>
 
 import {eventBus} from '../main';
+import GoogleLogin from 'vue-google-login';
+import ShoppingCart from './ShoppingCart';
 
 export default {
   name: 'navbar',
@@ -83,6 +94,10 @@ export default {
     return {
       selectedProduct: 'mens'
     }
+  },
+
+   components: {
+    ShoppingCart,
   },
 
   methods: {

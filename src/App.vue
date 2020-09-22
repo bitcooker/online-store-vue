@@ -101,5 +101,9 @@ html, body {
         margin-left: 45px;
       }
 
+      .sc-fix {
+        margin: 8px;
+      }
+
 </style>
   
