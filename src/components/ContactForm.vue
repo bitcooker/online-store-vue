@@ -36,6 +36,15 @@
 
       
 
+    <b-form-textarea
+      id="textarea"
+      v-model="form.text"
+      placeholder="Enter something..."
+      rows="3"
+      max-rows="6"
+    ></b-form-textarea>
+
+
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
@@ -48,11 +57,12 @@
       return {
         form: {
           email: '',
+          text: '',
           name: '',
           contact: null,
           checked: []
         },
-        contacts: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        contacts: [{ text: 'Select One', value: null }, 'Return query', 'Delivery', 'Sizing Query', 'Other'],
         show: true
       }
     },
@@ -68,6 +78,7 @@
         this.form.name = ''
         this.form.contact = null
         this.form.checked = []
+        this.form.text = ''
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
