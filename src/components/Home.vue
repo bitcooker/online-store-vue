@@ -44,11 +44,11 @@
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       
     </b-carousel>
-
+<!-- 
     <p class="mt-4">
       Slide #: {{ slide }}<br>
       Sliding: {{ sliding }}
-    </p>
+    </p> -->
   </div>
 </template>
 
