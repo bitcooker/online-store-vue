@@ -3,7 +3,7 @@
 <div>
  <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">Golden Shoe</b-navbar-brand>
+    <b-navbar-brand v-on:click="selectedPage('home')" href="#">Golden Shoe</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -28,13 +28,13 @@
           <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('mens')" href="#">Wide Fit Shoes</b-dropdown-item>
         </b-dropdown>
 
-         <b-dropdown id="dropdown-1" text="Womans" class="m-md-2">
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">All Shoes</b-dropdown-item>
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Ballet Pumps</b-dropdown-item>
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Flat Shoes</b-dropdown-item>
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Heels</b-dropdown-item>
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Trainers</b-dropdown-item>
-          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womans')" href="#">Wide Fit Shoes</b-dropdown-item>
+         <b-dropdown id="dropdown-1" text="Womens" class="m-md-2">
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">All Shoes</b-dropdown-item>
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">Ballet Pumps</b-dropdown-item>
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">Flat Shoes</b-dropdown-item>
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">Heels</b-dropdown-item>
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">Trainers</b-dropdown-item>
+          <b-dropdown-item v-on:click="selectedPage('products'), selectedProduct('womens')" href="#">Wide Fit Shoes</b-dropdown-item>
         </b-dropdown>
 
          <b-dropdown id="dropdown-1" text="Kids" class="m-md-2">

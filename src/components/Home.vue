@@ -15,14 +15,14 @@
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        caption="Find Your Shoe, Find Your Sole"
+        text=""
         img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
+      ><h1>Golden Shoe</h1></b-carousel-slide>
 
       <!-- Slides with custom text -->
       <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
+        <!-- <h1>Golden Shoe</h1> -->
       </b-carousel-slide>
 
       <!-- Slides with image only -->
@@ -37,8 +37,7 @@
             width="1024"
             height="480"
             src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
+            alt="image slot">
         </template>
       </b-carousel-slide>
 
@@ -87,11 +86,3 @@
 
 <style>
 
-export default {
- 
-  methods: {
-  selectedPage(page) {
-    eventBus.$emit("selected-page", page);
-    },
-  },
-}
