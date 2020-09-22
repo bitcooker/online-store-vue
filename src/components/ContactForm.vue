@@ -45,22 +45,26 @@
     ></b-form-textarea>
 
 
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button v-on:click="selectedPage('contactFormSubmit')" type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
 </template>
 
 <script>
+
+import { eventBus } from '../main';
+
   export default {
     data() {
       return {
+        
         form: {
           email: '',
           text: '',
           name: '',
           contact: null,
-          checked: []
+          checked: [],
         },
         contacts: [{ text: 'Select One', value: null }, 'Return query', 'Delivery', 'Sizing Query', 'Other'],
         show: true
@@ -69,8 +73,12 @@
     methods: {
       onSubmit(evt) {
         evt.preventDefault()
-        alert(JSON.stringify(this.form))
       },
+
+      selectedPage(page) {
+        eventBus.$emit("selected-page", page);
+      },
+
       onReset(evt) {
         evt.preventDefault()
         // Reset our form values

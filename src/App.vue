@@ -13,6 +13,7 @@
     
    </div>
    <CsPage v-if="selectedPage === 'csPage'"></CsPage>
+   <ContactFromSubmit v-if="selectedPage === 'contactFormSubmit'"> </ContactFromSubmit>
     <div>
       <Footer></Footer>
       <ContactForm v-if="selectedPage === 'contactForm'">Contact Form</ContactForm>
@@ -33,6 +34,7 @@ import SingleProduct from "./components/SingleProduct"
 import Chat from "./components/Chat"
 import CsPage from "./components/CsPage"
 import ContactForm from "./components/ContactForm"
+import ContactFromSubmit from "./components/ContactFromSubmit"
 
 
 // Vue.use(BootstrapVue)
@@ -68,6 +70,7 @@ export default {
     Chat,
     CsPage,
     ContactForm,
+    ContactFromSubmit,
 
   },
 };
