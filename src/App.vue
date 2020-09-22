@@ -15,8 +15,9 @@
    <CsPage v-if="selectedPage === 'csPage'"></CsPage>
    <ContactFromSubmit v-if="selectedPage === 'contactFormSubmit'"> </ContactFromSubmit>
     <div>
-      <Footer></Footer>
+      
       <ContactForm v-if="selectedPage === 'contactForm'">Contact Form</ContactForm>
+      <Footer></Footer>
     </div>
     </div>
 </template>
