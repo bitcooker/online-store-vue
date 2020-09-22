@@ -6,7 +6,6 @@
         label="Email address:"
         label-for="input-1"
         description="We'll never share your email with anyone else."
-
       >
         <b-form-input
           id="input-1"
@@ -29,35 +28,17 @@
       <b-form-group id="input-group-3" label="Reason For Contact:" label-for="input-3">
         <b-form-select
           id="input-3"
-          v-model="form.reasonForContact"
-          :options="reasonForContact"
+          v-model="form.contact"
+          :options="contacts"
           required
         ></b-form-select>
       </b-form-group>
 
-      <b-form-group id="input-group-4">
-        <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-        
-        </b-form-checkbox-group>
-      </b-form-group>
+      
 
-    
-    </b-form>
-   
-
-    <div>
-    <b-form-textarea
-      id="textarea"
-      v-model="form.text"
-      placeholder="Enter something..."
-      rows="3"
-      max-rows="6"
-    ></b-form-textarea>
-
-    <!-- <pre class="mt-3 mb-0">{{ text }}</pre> -->
-  </div>
-     <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
+    </b-form>
   </div>
 </template>
 
@@ -68,10 +49,10 @@
         form: {
           email: '',
           name: '',
-          text: '',
-          reasonForContact: null,
+          contact: null,
+          checked: []
         },
-        reasonForContact: [{ text: 'Select One', value: null }, 'Return', 'Delivery', 'Size Check', 'Other'],
+        contacts: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
         show: true
       }
     },
@@ -85,8 +66,8 @@
         // Reset our form values
         this.form.email = ''
         this.form.name = ''
-        this.form.text = ''
-        this.form.reasonForContact = null
+        this.form.contact = null
+        this.form.checked = []
         // Trick to reset/clear native browser form validation state
         this.show = false
         this.$nextTick(() => {
