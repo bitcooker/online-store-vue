@@ -36,7 +36,7 @@
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="https://firebasestorage.googleapis.com/v0/b/goldenshoe-9c251.appspot.com/o/running-shoes.jpg?alt=media&token=d46d5d04-774b-40e8-989c-ac06d34de7cb"
+            src="https://firebasestorage.googleapis.com/v0/b/goldenshoe-9c251.appspot.com/o/laces.jpg?alt=media&token=37f3ed29-5e12-40d0-a461-9915a567eda5"
             alt="image slot">
         </template>
       </b-carousel-slide>

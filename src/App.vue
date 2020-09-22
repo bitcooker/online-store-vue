@@ -87,5 +87,18 @@ export default {
        background-size: auto;
      
       } */
+      .card-body {
+        min-height: 145px;
+      }
+      .card {
+        margin-bottom: 10px;
+      }
+      .product-price {
+        padding: 0 15px; 
+      }
+      .product-add {
+        margin-left: 45px;
+      }
+
 </style>
   

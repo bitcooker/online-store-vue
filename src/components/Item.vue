@@ -12,9 +12,9 @@
         </div>
          <!-- <div class="card-text" >stock = {{stock}}</div> -->
         <!-- <div class="card-text">${{ price / 100 }}</div> -->
-        <div class="row justify-content-end">
+        <div class="row justify-content-start product-price">
           <div class="card-text">{{ price | dollars }}</div>
-          <button class="btn btn-primary" @click="addToCart(invId)" v-if="stock > 1">Add to cart</button>
+          <button class="btn btn-primary product-add" @click="addToCart(invId)" v-if="stock > 1">Add to cart</button>
           
         </div>
       </div>
