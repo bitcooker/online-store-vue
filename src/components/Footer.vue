@@ -11,6 +11,9 @@
  
      <div>
     <b-nav-item v-on:click="selectedPage('contactForm')" href="#">Contact Form</b-nav-item>
+    </div> 
+    <div>
+    <b-nav-item v-on:click="selectedPage('sizeChart')" href="#">Size Chart</b-nav-item>
     </div>
     
    </b-nav>

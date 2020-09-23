@@ -13,6 +13,7 @@
     
    </div>
    <CsPage v-if="selectedPage === 'csPage'"></CsPage>
+   <SizeChart v-if="selectedPage === 'sizeChart'"> </SizeChart>
    <ContactFromSubmit v-if="selectedPage === 'contactFormSubmit'"> </ContactFromSubmit>
     <div>
       
@@ -36,6 +37,7 @@ import Chat from "./components/Chat"
 import CsPage from "./components/CsPage"
 import ContactForm from "./components/ContactForm"
 import ContactFromSubmit from "./components/ContactFromSubmit"
+import SizeChart from "./components/sizeChart"
 
 
 // Vue.use(BootstrapVue)
@@ -72,6 +74,7 @@ export default {
     CsPage,
     ContactForm,
     ContactFromSubmit,
+    SizeChart
 
   },
 };
